@@ -13,5 +13,4 @@ const getAnimalsOlderThan = (animal, age) => data.species
   .every((animal1) => animal1.residents
     .every((animal3) => animal3.age >= age));
 
-console.log(getAnimalsOlderThan('otters', 70));
 module.exports = getAnimalsOlderThan;
