@@ -34,11 +34,24 @@ const getById = ({ id }) => {
   };
 };
 
-const noParameters = () => employees.filter(({ firstName }) => firstName.length > 1);
+const noParameters = () => employees.map(({ firstName, lastName, id, responsibleFor }) => {
+  const obj = {
+    id,
+    fullName: `${firstName} ${lastName}`,
+    species: responsibleFor.map((ids) => data.species.find((specie) => specie.id === ids).name),
+    locations: responsibleFor
+    .map((ids) => data.species.find((specie) => specie.id === ids).location),
+  };
+  return obj;
+});
+
 const getEmployeesCoverage = (obj) => {
-  if (obj === undefined) return noParameters();
-  if (data.employees.some(({ name }) => name === obj.name)) return getByName(obj);
-  if (data.employees.some(({ id }) => id === obj.id)) return getById(obj);
+  try {
+    if (obj === undefined) return noParameters();
+    if (data.employees.some(() => obj.name)) return getByName(obj);
+    if (data.employees.some(() => obj.id)) return getById(obj);
+  } catch (erro) {
+    throw new Error('Informações inválidas');
+  }
 };
-console.log(getEmployeesCoverage());
 module.exports = getEmployeesCoverage;
