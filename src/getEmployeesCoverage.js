@@ -40,7 +40,7 @@ const noParameters = () => employees.map(({ firstName, lastName, id, responsible
     fullName: `${firstName} ${lastName}`,
     species: responsibleFor.map((ids) => data.species.find((specie) => specie.id === ids).name),
     locations: responsibleFor
-    .map((ids) => data.species.find((specie) => specie.id === ids).location),
+      .map((ids) => data.species.find((specie) => specie.id === ids).location),
   };
   return obj;
 });
