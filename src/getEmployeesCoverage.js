@@ -54,4 +54,5 @@ const getEmployeesCoverage = (obj) => {
     throw new Error('Informações inválidas');
   }
 };
+console.log(getEmployeesCoverage());
 module.exports = getEmployeesCoverage;
