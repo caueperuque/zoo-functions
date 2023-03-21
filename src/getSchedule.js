@@ -52,6 +52,6 @@ const getSchedule = (scheduleTarget) => {
   }
   return generateObj();
 };
-console.log(getSchedule('Wednesday'));
+console.log(getSchedule('bears'));
 
 module.exports = getSchedule;
