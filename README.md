@@ -4,7 +4,7 @@
   <h1> Todos arquivos nas pastas "src" e "test" foram desenvolvidos por mim :smiley: </h1>
   <h1> Configurações de lint, e depêndencias foram feitas pela Trybe </h1>
 
-  <h2> Projeto com 100% de aprovação: Feito em JavaScript durante o módulos de Fundamentos da Trybe, ultilizando muitas HOFs
+  <h2> Projeto com 100% de aprovação: Feito em JavaScript durante o módulo de Fundamentos da Trybe, ultilizando muitas HOFs
   destructuring e outras funções nativas do JS. :wink: </h2>
 </div>
 
